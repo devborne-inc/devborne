@@ -1,11 +1,13 @@
-// font-family: 'Fira Sans', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap");
-@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,700|Work+Sans:300,400,700&display=swap");
+@import "_colors.scss";
+@import "_menu.scss";
+@import "_footer.scss";
 
 @font-face {
   font-family: "LibreBaskerville";
   src: url("./fonts/LibreBaskerville-Regular.otf") format("otf");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -17,34 +19,102 @@
 
 body {
   background-color: $background;
-  padding: 0 40px 20px;
-  height: 100%;
-  min-height: 100vh;
-  font-family: "Fira Sans", sans-serif;
+  // font-family: "Work Sans", sans-serif;
+  font-family: "Dosis", sans-serif;
+  // font-family: 'Fira Sans', sans-serif;
   color: $white;
 }
 
-.page-section {
+.scroller {
   height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
 }
 
-.title-wrapper {
+.section {
+  height: 100%;
+  padding: 0 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  scroll-snap-align: center;
 
-  .dev {
-    color: $white;
-    font-family: "Fira Sans", sans-serif;
+  &-title {
+    letter-spacing: 5px;
+  }
+}
+
+.home {
+  background: #020001;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+    margin-bottom: 100px;
+
+    .dev {
+      color: $white;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 100px;
+    }
+
+    .borne {
+      color: $white;
+      font-family: "LibreBarskerville";
+      font-size: 104px;
+    }
+
+    .bracket {
+      color: $primary;
+      font-family: "LibreBarskerville";
+      font-size: 120px;
+    }
+
+    .slogan {
+      font-size: 26px;
+      margin-top: 20px;
+    }
   }
 
-  .borne {
-    color: $white;
-    font-family: "LibreBarskerville";
-    font-size: 36px;
+  &-img {
+    width: 1200px;
+    height: auto;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
   }
+}
 
-  .bracket {
-    color: $primary;
-    font-size: 40px;
-  }
+.projects {
+  // /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#020001+0,212121+37 */
+  // background: #020001; /* Old browsers */
+  // background: -moz-linear-gradient(top, #020001 0%, #212121 37%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(
+  //   top,
+  //   #020001 0%,
+  //   #212121 50%
+  // ); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(
+  //   to bottom,
+  //   #020001 0%,
+  //   #212121 50%
+  // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020001', endColorstr='#212121',GradientType=0 ); /* IE6-9 */
+}
+
+.contact {
+  scroll-snap-align: end !important;
+  justify-content: space-between;
 }

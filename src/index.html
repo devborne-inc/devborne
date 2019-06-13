@@ -7,45 +7,74 @@
     <title>Devborn</title>
   </head>
   <body>
-    <div class="home page-section">
-      <div class="title-wrapper">
-        <span class="bracket">{</span>
-        <h1 class="dev">dev</h1>
-        <h1 class="borne">borne</h1>
-        <span class="bracket">}</span>
-      </div>
-      <div class="slogan">Torne sua ideia em realidade</div>
-      <img src="./assets/macbook-pro-at-night-picjumbo-com.jpg" alt="" />
-    </div>
-    <div class="projects page-section">
-      <h1 class="section-headline">Projetos</h1>
-    </div>
-    <div class="contact page-section">
-      <h1 class="section-headline">Contato</h1>
-      <p>Ficou interessado? Entre em contato conosco!</p>
-      <form>
-        <div class="input-wrapper">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Nome" />
+    <aside class="menu">
+      <ul>
+        <li>
+          <a href="#home" class="menu-link active">HOME</a>
+        </li>
+        <li>
+          <a href="" class="menu-link">SOBRE NÓS</a>
+        </li>
+        <li>
+          <a href="#projects" class="menu-link">PROJETOS</a>
+        </li>
+        <li>
+          <a href="#contact" class="menu-link">CONTATO</a>
+        </li>
+      </ul>
+    </aside>
+    <div class="scroller">
+      <section class="home section" id="home">
+        <div class="title-wrapper">
+          <h1>
+            <span class="bracket">{</span>
+            <span class="dev">dev</span>
+            <span class="borne">borne</span>
+            <span class="bracket">}</span>
+          </h1>
+          <p class="slogan">Torne sua ideia em realidade</p>
         </div>
-        <div class="input-wrapper">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Email" />
+        <img
+          class="home-img"
+          src="src/assets/macbook-pro-at-night-picjumbo-com.jpg"
+          alt=""
+        />
+      </section>
+      <section class="projects section" id="projects">
+        <h1 class="section-title">Projetos</h1>
+      </section>
+      <section class="contact section" id="contact">
+        <div class="contact-wrapper">
+          <h1 class="section-title">Contato</h1>
+          <p>Ficou interessado? Entre em contato conosco!</p>
+          <form>
+            <div class="input-wrapper">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="name" placeholder="Nome" />
+            </div>
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="input-wrapper">
+              <label for="email-body">Mensagem</label>
+              <textarea
+                name="email-body"
+                id="email-body"
+                cols="30"
+                rows="10"
+                placeholder="Sua mensagem"
+              ></textarea>
+            </div>
+          </form>
         </div>
-        <div class="input-wrapper">
-          <label for="email-body">Mensagem</label>
-          <textarea
-            name="email-body"
-            id="email-body"
-            cols="30"
-            rows="10"
-            placeholder="Sua mensagem"
-          ></textarea>
-        </div>
-      </form>
+        <footer>
+          <div class="content">
+            <p>Devborn, 2019</p>
+            <div class="social-media"></div>
+          </div>
+        </footer>
+      </section>
     </div>
-    <footer>
-      this is the footer
-    </footer>
   </body>
 </html>

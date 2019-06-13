@@ -16,7 +16,7 @@ module.exports = {
       title: 'Devborn',
       template: './src/index.html'
     }),
-    new FaviconsWebpackPlugin('./src/assets/db.png')
+    new FaviconsWebpackPlugin('./src/assets/favicon.png')
   ],
   module: {
     rules: [
@@ -38,6 +38,17 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000
+            }
+          }
+        ]
       }
     ]
   }
