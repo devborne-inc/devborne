@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <title>Devborn</title>
   </head>
   <body>
@@ -81,12 +82,12 @@
             <span class="bracket">}</span>
           </h1>
           <p>Ficou interessado? Entre em contato conosco!</p>
-          <form>
+          <form id="contact-form">
             <div class="input-wrapper">
               <label hidden for="name">Nome</label>
               <input
                 type="text"
-                name="name"
+                name="from_name"
                 id="name"
                 placeholder="Seu nome"
                 required
@@ -96,7 +97,7 @@
               <label hidden for="email">Email</label>
               <input
                 type="email"
-                name="email"
+                name="from_email"
                 id="email"
                 placeholder="Seu email"
                 required
@@ -105,7 +106,7 @@
             <div class="input-wrapper">
               <label hidden for="email-body">Mensagem</label>
               <textarea
-                name="email-body"
+                name="message_html"
                 id="email-body"
                 cols="30"
                 rows="6"

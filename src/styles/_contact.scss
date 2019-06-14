@@ -86,5 +86,9 @@
       border-color: $primary;
       background: $primary;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

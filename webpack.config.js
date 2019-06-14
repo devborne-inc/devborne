@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -16,7 +17,11 @@ module.exports = {
       title: 'Devborn',
       template: './src/index.html'
     }),
-    new FaviconsWebpackPlugin('./src/assets/favicon.png')
+    new FaviconsWebpackPlugin('./src/assets/favicon.png'),
+    new ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ],
   module: {
     rules: [
