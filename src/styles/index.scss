@@ -1,5 +1,6 @@
-.title-wrapper {
-  .title {
-    color: blue;
-  }
-}
+@import "global";
+@import "menu";
+@import "home";
+@import "projects";
+@import "contact";
+@import "footer";

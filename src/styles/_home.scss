@@ -1,0 +1,72 @@
+.home {
+  background: #020001;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+    margin-bottom: 100px;
+
+    .dev {
+      color: $white;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 100px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 60px;
+      }
+    }
+
+    .borne {
+      color: $white;
+      font-family: "LibreBarskerville";
+      font-size: 104px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 64px;
+      }
+    }
+
+    .bracket {
+      color: $primary;
+      font-family: "LibreBarskerville";
+      font-size: 120px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 70px;
+      }
+    }
+
+    .slogan {
+      font-size: 26px;
+      margin-top: 20px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-img {
+    width: 1200px;
+    height: auto;
+    position: absolute;
+    bottom: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+
+    @media screen and (max-width: 700px) {
+      width: 640px;
+      bottom: -80px;
+    }
+  }
+}
