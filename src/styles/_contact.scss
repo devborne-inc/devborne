@@ -1,25 +1,33 @@
 .contact {
-  scroll-snap-align: end !important;
-  justify-content: space-between;
-  background: $background;
-  scroll-snap-align: none !important;
-  height: 100vh;
   background: #303030;
+  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: none !important;
 
   p {
+    text-align: center;
     font-size: 18px;
     margin: 20px 0;
+
+    @media screen and (max-width: 700px) {
+      font-size: 16px;
+      margin: 20px 10px;
+    }
   }
 
   form {
-    margin-top: 40px;
     max-width: 400px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 700px) {
+      width: 80%;
+    }
   }
 
   input {
     font-family: "Work Sans", sans-serif;
     border: 0;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid $secondary;
     background: transparent;
     width: 100%;
     display: block;
@@ -35,11 +43,15 @@
       outline-offset: none !important;
       border-bottom-color: $primary;
     }
+
+    @media screen and (max-width: 700px) {
+      font-size: 20px;
+    }
   }
 
   textarea {
     background: transparent;
-    border: 1px solid #777;
+    border: 1px solid $secondary;
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
     padding: 10px;
@@ -52,10 +64,14 @@
       outline-offset: none !important;
       border-color: $primary;
     }
+
+    @media screen and (max-width: 700px) {
+      font-size: 16px;
+    }
   }
 
   button.submit-btn {
-    border: 1px solid #777;
+    border: 1px solid $secondary;
     background: transparent;
     color: $white;
     padding: 10px 30px;

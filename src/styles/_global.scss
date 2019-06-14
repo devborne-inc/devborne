@@ -46,10 +46,18 @@ body {
     margin-top: 50px;
     text-align: center;
 
+    @media screen and (max-width: 700px) {
+      font-size: 32px;
+    }
+
     .bracket {
       color: $primary;
       font-family: "LibreBarskerville";
       font-size: 56px;
+
+      @media screen and (max-width: 700px) {
+        font-size: 40px;
+      }
     }
   }
 }
