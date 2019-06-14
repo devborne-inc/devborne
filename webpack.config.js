@@ -34,20 +34,33 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
       },
+      // {
+      //   test: /\.(png|jpg|gif)$/,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 5000
+      //       }
+      //     }
+      //   ]
+      // },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.html$/,
+        use: ['html-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|gif|jpeg)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 5000
+              name: '[name].[ext]',
+              outputPath: 'assets/',
+              publicPath: 'assets/'
             }
           }
         ]
