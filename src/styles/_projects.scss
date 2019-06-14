@@ -1,0 +1,17 @@
+.projects {
+  &-wrapper {
+    height: 100%;
+    max-width: 900px;
+    background: #555;
+    margin: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 5px;
+  }
+
+  .project-logo {
+    max-height: 120px;
+  }
+}

@@ -1,0 +1,74 @@
+.contact {
+  scroll-snap-align: end !important;
+  justify-content: space-between;
+  background: $background;
+  scroll-snap-align: none !important;
+  height: 100vh;
+  background: #303030;
+
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  form {
+    margin-top: 40px;
+    max-width: 400px;
+  }
+
+  input {
+    font-family: "Work Sans", sans-serif;
+    border: 0;
+    border-bottom: 1px solid #777;
+    background: transparent;
+    width: 100%;
+    display: block;
+    font-size: 24px;
+    color: $white;
+    margin: 0;
+    padding: 10px 5px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:focus {
+      outline: none !important;
+      outline-offset: none !important;
+      border-bottom-color: $primary;
+    }
+  }
+
+  textarea {
+    background: transparent;
+    border: 1px solid #777;
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    color: $white;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none !important;
+      outline-offset: none !important;
+      border-color: $primary;
+    }
+  }
+
+  button.submit-btn {
+    border: 1px solid #777;
+    background: transparent;
+    color: $white;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-family: "Work Sans", sans-serif;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $primary;
+      background: $primary;
+    }
+  }
+}
