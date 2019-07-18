@@ -14,7 +14,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Devborn',
+      title: 'Devborne',
       template: './src/index.html'
     }),
     new FaviconsWebpackPlugin('./src/assets/favicon.png'),
