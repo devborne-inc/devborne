@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,700|Work+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap");
 @import "_colors.scss";
 
 @font-face {
@@ -16,29 +16,21 @@
 }
 
 body {
-  background-color: $background;
   font-family: "Work Sans", sans-serif;
-  // font-family: "Dosis", sans-serif;
   // font-family: 'Fira Sans', sans-serif;
   color: $white;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
-.scroller {
+section {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
 }
 
 .section {
   height: 100%;
   padding: 20px 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
   scroll-snap-align: start;
 
   &-title {

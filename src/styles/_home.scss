@@ -1,72 +1,81 @@
 .home {
-  background: #020001;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+  background-color: $white;
 
-  .title-wrapper {
+  &__container {
+    position: relative;
+    padding: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    justify-content: flex-end;
+    max-width: 50%;
+    text-align: end;
     z-index: 1;
-    margin-bottom: 100px;
+  }
 
-    .dev {
-      color: $white;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 100px;
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 700px;
+  }
 
-      @media screen and (max-width: 700px) {
-        font-size: 60px;
-      }
+  &__title {
+    font-size: 90px;
+    color: #18343E;
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    color: #18343E;
+    margin-top: 60px;
+  }
+
+  .typewriter {
+    height: 50px;
+    margin: 10px 0px 50px;
+
+    &__text {
+      font-size: 32px;
+      color: #18343E;
+      text-decoration: none;
     }
 
-    .borne {
-      color: $white;
-      font-family: "LibreBarskerville";
-      font-size: 104px;
-
-      @media screen and (max-width: 700px) {
-        font-size: 64px;
-      }
+    .blink {
+      font-size: 32px;
+      border-right: 0.08em solid #598FA9;
+      animation: blink 1s step-start 0s infinite;
     }
 
-    .bracket {
-      color: $primary;
-      font-family: "LibreBarskerville";
-      font-size: 120px;
-
-      @media screen and (max-width: 700px) {
-        font-size: 70px;
-      }
-    }
-
-    .slogan {
-      font-size: 26px;
-      margin-top: 20px;
-
-      @media screen and (max-width: 700px) {
-        font-size: 16px;
+    @keyframes blink {
+      50% {
+        opacity: 0;
       }
     }
   }
 
-  &-img {
-    width: 1200px;
-    height: auto;
-    position: absolute;
-    bottom: -250px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
 
-    @media screen and (max-width: 700px) {
-      width: 640px;
-      bottom: -80px;
+  &__button {
+    width: 200px;
+    background-color: #598FA9;
+    color: $white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    text-align: center;
+    transition: opacity .4s ease;
+
+    &:hover {
+      opacity: .8;
     }
   }
 }
