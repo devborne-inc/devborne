@@ -1,5 +1,7 @@
 .home {
   background-color: $white;
+  display: flex;
+  justify-content: center;
 
   &__container {
     position: relative;
@@ -7,7 +9,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100vh;
+    width: 100%;
   }
 
   &__content {
@@ -33,9 +35,10 @@
   }
 
   &__subtitle {
-    font-size: 26px;
+    font-size: 24px;
     color: #18343E;
     margin-top: 60px;
+    font-weight: 300;
   }
 
   .typewriter {
@@ -50,7 +53,7 @@
 
     .blink {
       font-size: 32px;
-      border-right: 0.08em solid #598FA9;
+      border-right: 0.08em solid #4F849F;
       animation: blink 1s step-start 0s infinite;
     }
 
@@ -61,10 +64,9 @@
     }
   }
 
-
   &__button {
     width: 200px;
-    background-color: #598FA9;
+    background-color: #4F849F;
     color: $white;
     padding: 15px 20px;
     border-radius: 10px;
