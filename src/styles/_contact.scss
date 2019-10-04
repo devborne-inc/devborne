@@ -1,23 +1,24 @@
 .contact {
-  background: #303030;
-  justify-content: center;
-  height: 100vh;
-  scroll-snap-align: none !important;
 
-  p {
-    text-align: center;
-    font-size: 18px;
-    margin: 20px 0;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    position: relative;
+    z-index: 2;
+  }
 
-    @media screen and (max-width: 700px) {
-      font-size: 16px;
-      margin: 20px 10px;
-    }
+  .parallax {
+    /* The image used */
+    background-image: url("../assets/photo-2.jpg");
+
+    /* Set a specific height */
+    height: 500px;
   }
 
   form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
 
     @media screen and (max-width: 700px) {
       width: 80%;
@@ -26,13 +27,11 @@
 
   input {
     font-family: "Work Sans", sans-serif;
-    border: 0;
-    border-bottom: 1px solid $secondary;
-    background: transparent;
+    background: $white;
     width: 100%;
     display: block;
-    font-size: 24px;
-    color: $white;
+    font-size: 18px;
+    color: #333;
     margin: 0;
     padding: 10px 5px;
     margin-bottom: 30px;
@@ -41,7 +40,7 @@
     &:focus {
       outline: none !important;
       outline-offset: none !important;
-      border-bottom-color: $primary;
+      border-color: #2AC7E3;
     }
 
     @media screen and (max-width: 700px) {
@@ -50,8 +49,8 @@
   }
 
   textarea {
-    background: transparent;
-    border: 1px solid $secondary;
+    background: $white;
+    border: 1px solid $white;
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
     padding: 10px;
@@ -62,7 +61,7 @@
     &:focus {
       outline: none !important;
       outline-offset: none !important;
-      border-color: $primary;
+      border-color: #2AC7E3;
     }
 
     @media screen and (max-width: 700px) {
@@ -71,20 +70,19 @@
   }
 
   button.submit-btn {
-    border: 1px solid $secondary;
-    background: transparent;
+    border: none;
+    border-radius: 5px;
+    background: #4F849F;
     color: $white;
     padding: 10px 30px;
     font-size: 18px;
     font-family: "Work Sans", sans-serif;
-    text-transform: uppercase;
     display: block;
     margin: 10px auto;
     transition: all 0.3s ease;
 
     &:hover {
-      border-color: $primary;
-      background: $primary;
+      opacity: .8;
     }
 
     &:focus {

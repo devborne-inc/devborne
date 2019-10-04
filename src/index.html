@@ -178,5 +178,47 @@
         </div>
       </div>
     </section>
+    <section class="contact">
+        <div class="contact__container parallax">
+          <div class="contact__content">
+            <h1 class="section-title">Vamos trabalhar juntos!</h1>
+            <form id="contact-form">
+                <div class="input-wrapper">
+                  <label hidden for="name">Nome</label>
+                  <input
+                    type="text"
+                    name="from_name"
+                    id="name"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label hidden for="email">Email</label>
+                  <input
+                    type="email"
+                    name="from_email"
+                    id="email"
+                    placeholder="Seu email"
+                    required
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label hidden for="email-body">Mensagem</label>
+                  <textarea
+                    name="message_html"
+                    id="email-body"
+                    cols="30"
+                    rows="6"
+                    placeholder="Sua mensagem"
+                    required
+                  ></textarea>
+                </div>
+                <button class="submit-btn" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -33,6 +33,28 @@ section {
   }
 }
 
+/* Parallax effect */
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .3);
+  }
+}
+
 /* Fade-in effect */
 .fadein {
   opacity: 0;
