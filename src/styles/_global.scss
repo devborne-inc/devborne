@@ -16,12 +16,18 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   // font-family: 'Fira Sans', sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   overflow-x: hidden;
+  position: relative;
   color: $black;
 }
 
