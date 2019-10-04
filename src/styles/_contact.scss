@@ -1,5 +1,7 @@
 .contact {
-  height: 600px;
+  &__container {
+    padding: 80px;
+  }
 
   &__content {
     display: flex;
@@ -16,15 +18,22 @@
     font-weight: 400;
   }
 
-  .parallax {
-    /* The image used */
-    background-image: url("../assets/photo-2.jpg");
+  .bg-image {
+    overflow: hidden; // added for pseudo-element
+    position: relative; // added for pseudo-element
 
-    /* Set a specific height */
-    height: 600px;
+    background: url('../assets/photo-2.jpg') no-repeat;
+    background-size: cover;
 
-    &::before {
-      background-color: rgba(0,0,0, .5);
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, .4);
     }
   }
 

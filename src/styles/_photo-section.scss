@@ -1,12 +1,28 @@
 .photo-section {
   height: 400px;
+  position: relative;
 
   .parallax {
-    /* The image used */
-    background-image: url("../assets/photo-1.jpg");
-
     /* Set a specific height */
     height: 400px;
+
+    overflow: hidden; // added for pseudo-element
+    position: relative; // added for pseudo-element
+
+    &::before {
+      background: url('../assets/photo-1.jpg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      will-change: transform;
+      z-index: -1;
+    }
   }
 
   &__text {
