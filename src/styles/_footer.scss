@@ -1,5 +1,5 @@
 footer {
-  background: $green-blue;
+  background: $green-blue-dark;
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,10 +10,10 @@ footer {
     position: absolute;
     width: 100%;
     z-index: 1;
-    top: -220px;
+    top: -200px;
 
     svg {
-      fill: $green-blue;
+      fill: $green-blue-dark;
     }
   }
 

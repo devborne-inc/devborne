@@ -1,5 +1,6 @@
 .technology {
-  background: linear-gradient(135deg, rgba(42,199,227,1) 0%, rgba(24,52,62,1) 0%, rgba(42,199,227,1) 100%);
+  // background: linear-gradient(135deg, #2ac7e3 0%, #18343e 0%, #2ac7e3 100%);
+  background: linear-gradient(135deg, $green-blue 0%, $green-blue-dark 0%, $green-blue 100%);
 
   color: $white;
 
