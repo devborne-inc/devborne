@@ -1,0 +1,51 @@
+.clients {
+  background-color: #F0F0F0;
+
+  .section-title {
+    color: #18343E;
+  }
+
+  &__container {
+    padding: 50px 80px;
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .blob {
+    position: absolute;
+  }
+
+  .blob-1 {
+    top: -300px;
+    left: -400px;
+  }
+
+  .blob-2 {
+    bottom: -300px;
+    right: -300px;
+  }
+
+  &__logos {
+    margin-top: 50px;
+  }
+
+  .client-logo {
+    max-width: 200px;
+    align-self: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

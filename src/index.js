@@ -1,6 +1,7 @@
 import './styles/index.scss';
 import './assets/macbook-pro-at-night-picjumbo-com.jpg'
 import './js/typeEffect';
+import './js/fadeInEffect';
 
 // Emailjs
 (function () {
