@@ -32,12 +32,12 @@
 
   &__title {
     font-size: 90px;
-    color: #18343E;
+    color: $green-blue-dark;
   }
 
   &__subtitle {
     font-size: 24px;
-    color: #18343E;
+    color: $black;
     margin-top: 60px;
     font-weight: 300;
   }
@@ -48,14 +48,14 @@
 
     &__text {
       font-size: 32px;
-      color: #18343E;
+      color: $green-blue-dark;
       text-decoration: none;
       cursor: default;
     }
 
     .blink {
       font-size: 32px;
-      border-right: 0.08em solid #4F849F;
+      border-right: 0.08em solid $green-blue;
       animation: blink 1s step-start 0s infinite;
     }
 
@@ -68,7 +68,7 @@
 
   &__button {
     width: 200px;
-    background-color: #4F849F;
+    background-color: $green-blue;
     color: $white;
     padding: 15px 20px;
     border-radius: 10px;

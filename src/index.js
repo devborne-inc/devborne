@@ -26,3 +26,9 @@ formBtn.click((e) => {
       formBtn.text('Enviar');
     });
 })
+
+// Team member hover
+const handlerIn = function() { $(this).addClass('active') }
+const handlerOut = function() { $(this).removeClass('active') }
+
+$('.team-member').hover(handlerIn, handlerOut);

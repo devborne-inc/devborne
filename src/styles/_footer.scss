@@ -1,9 +1,21 @@
 footer {
-  background: #4F849F;
+  background: $green-blue;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .wave {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -220px;
+
+    svg {
+      fill: $green-blue;
+    }
+  }
 
   .content {
     padding: 15px;
@@ -13,6 +25,7 @@ footer {
     align-items: center;
     justify-content: center;
     color: $white;
+    z-index: 3;
   }
 
   .social-media {

@@ -9,6 +9,11 @@
     overflow: hidden; // added for pseudo-element
     position: relative; // added for pseudo-element
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &::before {
       background: url('../assets/photo-1.jpg');
       background-repeat: no-repeat;
@@ -23,12 +28,33 @@
       will-change: transform;
       z-index: -1;
     }
+
+    &::after {
+      background-color: rgba(0, 0, 0, .5);
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
   }
 
-  &__text {
+  &__headline {
     font-size: 46px;
     color: $white;
     position: relative;
     z-index: 1;
+    margin-bottom: 30px;
+  }
+
+  &__subheadline {
+    max-width: 500px;
+    font-size: 18px;
+    color: $white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.7;
   }
 }
