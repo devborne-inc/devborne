@@ -6,8 +6,9 @@
   }
 
   &__container {
-    padding: 50px 80px;
+    padding: 80px;
     position: relative;
+    height: 100%;
   }
 
   &__content {
@@ -29,7 +30,7 @@
   }
 
   .blob-2 {
-    bottom: -300px;
+    bottom: -200px;
     right: -300px;
   }
 
