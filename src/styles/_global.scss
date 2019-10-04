@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap");
-@import "_colors.scss";
+@import "_colors";
+@import "_breakpoints";
 
 @font-face {
   font-family: "LibreBaskerville";
@@ -29,28 +30,6 @@ section {
   .section-title {
     font-size: 36px;
     font-weight: 300;
-  }
-}
-
-/* Parallax effect */
-.parallax {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  overflow: hidden; // added for pseudo-element
-  position: relative; // added for pseudo-element
-
-  &::before {
-    content: '';
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    will-change: transform;
-    z-index: -1;
   }
 }
 
