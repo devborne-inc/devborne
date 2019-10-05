@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,700|Work+Sans:300,400,700&display=swap");
-@import "_colors.scss";
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap");
+@import "_colors";
+@import "_breakpoints";
 
 @font-face {
   font-family: "LibreBaskerville";
@@ -15,50 +16,34 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
-  background-color: $background;
   font-family: "Work Sans", sans-serif;
-  // font-family: "Dosis", sans-serif;
   // font-family: 'Fira Sans', sans-serif;
-  color: $white;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
+  overflow-x: hidden;
+  position: relative;
+  color: $black;
 }
 
-.scroller {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
-}
 
-.section {
-  height: 100%;
-  padding: 20px 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  scroll-snap-align: start;
+section {
+  .section-title {
+    font-size: 36px;
+    font-weight: 300;
 
-  &-title {
-    letter-spacing: 5px;
-    font-size: 48px;
-    margin-top: 50px;
-    text-align: center;
-
-    @media screen and (max-width: 700px) {
-      font-size: 32px;
-    }
-
-    .bracket {
-      color: $primary;
-      font-family: "LibreBarskerville";
-      font-size: 56px;
-
-      @media screen and (max-width: 700px) {
-        font-size: 40px;
-      }
+    @include mobile {
+      font-size: 24px;
     }
   }
+}
+
+/* Fade-in effect */
+.fadein {
+  opacity: 0;
 }

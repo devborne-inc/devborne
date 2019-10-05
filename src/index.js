@@ -1,5 +1,6 @@
 import './styles/index.scss';
-import './assets/macbook-pro-at-night-picjumbo-com.jpg'
+import './js/typeEffect';
+import './js/fadeInEffect';
 
 // Emailjs
 (function () {
@@ -25,3 +26,9 @@ formBtn.click((e) => {
       formBtn.text('Enviar');
     });
 })
+
+// Team member hover
+const handlerIn = function() { $(this).addClass('active') }
+const handlerOut = function() { $(this).removeClass('active') }
+
+$('.team-member').hover(handlerIn, handlerOut);

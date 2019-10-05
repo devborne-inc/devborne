@@ -1,11 +1,25 @@
 footer {
-  background: $background-dark;
+  background: $green-blue-dark;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-  padding: 20px;
+  position: relative;
+
+  .wave {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -200px;
+
+    svg {
+      fill: $green-blue-dark;
+    }
+
+    @include mobile {
+      top: -70px;
+    }
+  }
 
   .content {
     padding: 15px;
@@ -14,6 +28,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: $white;
+    z-index: 3;
   }
 
   .social-media {
@@ -21,11 +37,12 @@ footer {
 
     a svg g {
       transition: fill 0.3s ease;
+      fill: $white;
     }
 
     a {
       &:hover svg g {
-        fill: $primary;
+        opacity: .8
       }
     }
   }
