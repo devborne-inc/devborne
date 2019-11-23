@@ -60,6 +60,7 @@
   .client-logo {
     max-width: 200px;
     align-self: center;
+    margin: 10px 30px;
 
     @include mobile {
       max-width: 150px;
