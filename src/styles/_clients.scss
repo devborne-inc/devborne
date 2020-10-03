@@ -49,6 +49,12 @@
     }
   }
 
+  .blob-2 svg {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__logos {
     margin-top: 50px;
 
@@ -90,7 +96,7 @@
     justify-content: center;
     align-items: center;
   }
- 
+
   .lett-wrapper {
     background: #ffffff;
     border-radius: 10px;
